@@ -1,0 +1,195 @@
+.block {
+   position: relative;
+   padding-top: 150px;
+   background: #ebeef5;
+   &__body {
+   }
+
+   &__content {
+      display: flex;
+      height: 620px/1920px * 100vw;
+      min-height: 200px;
+   }
+
+   &__item1 {
+      flex: 0 1 50%;
+      position: relative;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+
+   &__item2 {
+      flex: 0 1 50%;
+      position: relative;
+      img {
+         position: absolute;
+         z-index: 1;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+}
+//можно сделать чтобы икнонка кнопки была видна при ховере,актив,фокусу
+.btn__over {
+   background: url(../img/plus.svg) center no-repeat;
+   background-color: #397dff;
+}
+.item2__btn {
+   position: relative;
+   display: inline-block;
+   z-index: 5;
+   width: 27px;
+   height: 27px;
+   border-radius: 50%;
+   border: 1px solid #397dff;
+
+   // &:active,
+   // &:focus{
+   //    background: url(../img/plus.svg) center no-repeat;
+   //    background-color: #397dff;
+   // }
+}
+.btn__body {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 73px;
+   height: 73px;
+   border-radius: 50%;
+   border: 1px solid #397dff;
+   background: rgba(57, 125, 255, 0.15);
+   position: absolute;
+   z-index: 3;
+}
+.btn-1 {
+   top: 73px/620px * 100%;
+   left: 172px/960px * 100%;
+}
+.btn-2 {
+   top: 73px/620px * 100%;
+   right: 198px/960px * 100%;
+}
+
+.block-popup {
+   opacity: 0;
+   visibility: hidden;
+   position: relative;
+   position: absolute;
+   bottom: 50px;
+   left: -139, 5px;
+   z-index: 12;
+   &__content {
+      position: relative;
+      z-index: 7;
+      width: 352px;
+      height: 189px;
+      padding: 17px 16px 15px 24px;
+      position: relative;
+      border: none;
+      box-shadow: 10px 16px 32px rgba(17, 17, 17, 0.08);
+      &::after {
+         position: absolute;
+         z-index: 7;
+         bottom: -6px;
+         left: 50%;
+         display: block;
+         content: "";
+         width: 24px;
+         height: 24px;
+         border-radius: 2px;
+         background: #fff;
+         transform: translate(-50%) rotate(45deg);
+         box-shadow: 10px 16px 32px rgba(17, 17, 17, 0.08);
+      }
+   }
+   &__btnclose {
+      display: inline-block;
+      z-index: 1;
+      outline: none;
+      border: none;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 17px;
+      right: 16px;
+      background: url(../img/close_icon.svg) center no-repeat;
+      background-size: 12px 12px;
+   }
+   &__body {
+   }
+
+   &__header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+   }
+
+   &__title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: #2b2d3a;
+      flex: 0 0 154px;
+      margin-right: 86px;
+   }
+
+   &__img {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+
+   &__menu {
+      width: 100%;
+      padding-left: 24px;
+      margin: 0;
+      margin-top: 12px;
+
+      li {
+         position: relative;
+         z-index: 8;
+         font-size: 12px;
+         line-height: 17px;
+         color: #2b2d3a;
+         display: flex;
+         margin-bottom: 10px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            top: 0;
+            left: -24px;
+            background: url("../img/liststyle.svg") 0 0 no-repeat;
+         }
+      }
+   }
+}
+
+.popover-body {
+   display: none;
+}
+.popover-header {
+   padding: 0px 0px 0px 0px;
+}

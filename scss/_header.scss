@@ -1,0 +1,128 @@
+.wrapper {
+}
+.header {
+   position: fixed;
+   z-index: 999;
+   width: 100%;
+   background: #ebeef5;
+   transition: all 0.3s ease 0s;
+   &__container {
+      height: 90px;
+   }
+   .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+   &__logo {
+      padding: 0;
+      margin-right: 25px;
+   }
+   &__menu {
+      height: 90px;
+      padding: 0;
+      ul {
+         height: 100%;
+         width: 100%;
+         align-items: center;
+         justify-content: space-between;
+         margin-right: 25px;
+      }
+   }
+
+   &__list {
+      box-sizing: border-box;
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &:hover:after {
+         content: "";
+         width: 66%;
+         height: 3px;
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         background: #397dff;
+         border-radius: 6px;
+         transform: translate(-50%);
+      }
+      &:hover a {
+         // font-weight: 600;
+         text-shadow: 0 0 3px #397dff;
+         text-decoration: none;
+      }
+   }
+
+   &__link {
+      text-decoration: none;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 17px;
+      color: rgba(43, 45, 58, 0.7);
+      white-space: nowrap;
+   }
+   &__user {
+      display: flex;
+      align-items: center;
+      padding: 0;
+   }
+   &__mail {
+      span {
+         font-weight: 600;
+         font-size: 13px;
+         line-height: 16px;
+         white-space: nowrap;
+         color: #2b2d3a;
+      }
+   }
+   @media (max-width: 375px) {
+      height: 114px;
+   }
+}
+
+.mail-link {
+   display: flex;
+   align-items: center;
+   svg {
+      margin-right: 8px;
+   }
+}
+.callback {
+   display: inline-block;
+   padding-left: 56px;
+   background: url("../img/phone_icon.svg") 24px center no-repeat;
+   background-size: 24px 24px;
+   &:hover {
+      text-decoration: none;
+   }
+
+   &__link {
+      text-decoration: none;
+      font-size: 11px;
+      line-height: 11px;
+      white-space: nowrap;
+      color: #397dff;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      // &:after {
+      //    content: "";
+      //    position: absolute;
+      //    top: 0;
+      //    left: -32px;
+      //    display: block;
+      //    width: 25px;
+      //    height: 200%;
+      //    background: url('../img/phone_icon.svg') center no-repeat;
+      // }
+   }
+   &__num {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 14px;
+      color: #2b2d3a;
+   }
+   @media (max-width: 991px) {
+      display: none;
+   }
+}
