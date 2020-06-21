@@ -320,6 +320,7 @@
 .navbar-light .navbar-toggler {
   outline: none;
   border: none;
+  z-index: 20;
 }
 
 .navbar-light .navbar-toggler-icon {
