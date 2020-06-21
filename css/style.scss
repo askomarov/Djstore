@@ -1,0 +1,62 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+@import "fonts.scss";
+$fontfamily: Montserrat;
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+   //миксин для адаптивного шрифта
+   $addSize: $pcSize - $mobSize;
+   $maxWidth: $maxWidth - 320;
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@import "_header.scss";
+@import "_callback.scss";
+@import "_promo.scss";
+@import "_block";
+@import "_footer";
+
+body {
+   font-family: "Montserrat";
+   line-height: 12px;
+   &.lock {
+      overflow: hidden;
+   }
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+   max-width: 1170px;
+   min-width: 320px;
+}
+
+.block-popover {
+   padding-top: 50px;
+   position: relative;
+   z-index: 20;
+   .btn {
+      color: red;
+   }
+}
+
+.showme {
+   opacity: 1;
+   visibility: visible;
+}
+.out {
+   transform: translateY(-100%);
+   opacity: 0;
+}
+.remove-bg {
+   background-color: transparent;
+}
