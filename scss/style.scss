@@ -27,8 +27,7 @@ body {
    font-family: "Montserrat";
    line-height: 12px;
    &.lock {
-      overflow-y: hidden !important;
-      overflow-x: auto;
+      overflow: hidden;
    }
 }
 

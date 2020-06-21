@@ -84,6 +84,9 @@
       border-radius: 8px;
    }
    .item-slider {
+      @media (max-width: 600px) {
+         width: 310px !important ;
+      }
       width: 322px !important;
       // max-width: 330px;
       height: 205px !important;
@@ -119,6 +122,11 @@
       top: 198px/1920px * 100vw;
       right: 0;
       background: none;
+   }
+   @media (max-width: 600px) {
+      width: 500px/600px * 100vw !important;
+      min-width: 320px;
+      margin: 0 auto;
    }
 }
 /* Слайдер */
