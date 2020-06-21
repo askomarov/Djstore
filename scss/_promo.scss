@@ -2,18 +2,23 @@
    color: #fff;
    position: relative;
    padding-top: 90px;
+   background: #ebeef5;
    .container {
       display: flex;
    }
 
    &__text-block {
-      width: 590px;
+      // width: 590px/1920px * 100vw;
+      min-width: 300px;
+      @media (max-width: 500px) {
+         padding-top: 36px;
+      }
       h2 {
          width: 100%;
          font-weight: 500;
          font-size: 18px;
          line-height: 22px;
-         @media (max-width: 375px) {
+         @media (max-width: 660px) {
             font-size: 14px;
             line-height: 17px;
          }
@@ -25,27 +30,33 @@
          font-size: 52px;
          line-height: 63px;
          white-space: nowrap;
-         @media (max-width: 375px) {
+         @media (max-width: 1160px) {
+            font-size: 40px;
+         }
+         @media (max-width: 1060px) {
+            font-size: 32px;
+         }
+         @media (max-width: 660px) {
             font-size: 30px;
             line-height: 37px;
          }
+         @media (max-width: 374px) {
+            white-space: pre-wrap;
+         }
       }
       p {
-         width: 100%;
+         // width: 100%;
+         width: 590px/1920px * 100vw;
+         min-width: 300px;
          font-weight: 500;
          font-size: 16px;
          line-height: 24px;
          margin-bottom: 54px;
-         @media (max-width: 375px) {
+         @media (max-width: 660px) {
             font-size: 14px;
             left: 21px;
+            margin-bottom: 32px;
          }
-      }
-
-      &__btns {
-      }
-
-      &__slider {
       }
    }
    .promo-btn {
@@ -56,7 +67,7 @@
       border-radius: 8px;
       width: 186px;
       height: 48px;
-      @media (max-width: 375px) {
+      @media (max-width: 480px) {
          width: 158px;
          height: 42px;
          font-size: 14px;
@@ -66,6 +77,7 @@
    .btn-callback {
       border: 1px solid #ffffff;
       margin-right: 24px;
+      margin: 0 auto;
    }
    .btn-brief {
       background: #397dff;
@@ -99,18 +111,19 @@
 .promo__slider {
    width: 515px !important;
    height: 271px;
-   position: absolute !important;
-   z-index: 20;
-   top: 198px/1920px * 100vw;
-   right: 0;
+   margin: 0 auto;
+   background: #6d6d7d;
+   @media (min-width: 920px) {
+      position: absolute !important;
+      z-index: 20;
+      top: 198px/1920px * 100vw;
+      right: 0;
+      background: none;
+   }
 }
 /* Слайдер */
 .slick-slider {
    position: relative;
-} /* Слайдер запущен */
-.slick-slider.slick-initialized {
-} /* Слайдер с точками */
-.slick-slider.slick-dotted {
 }
 /* Ограничивающая оболочка */
 .slick-list {
@@ -123,16 +136,10 @@
    position: relative;
    display: flex;
 }
-/* Слайд */
-.slick-slide {
-} /* Слайд активный (показывается) */
+
+/* Слайд активный (показывается) */
 .slick-slide.slick-active {
-} /* Слайд основной */
-.slick-slide.slick-current {
-} /* Слайд по центру */
-.slick-slide.slick-center {
-} /* Клонированный слайд */
-.slick-slide.slick-cloned {
+   z-index: 100 !important;
 }
 /* Стрелка */
 .slick-arrow {
@@ -145,7 +152,7 @@
    position: absolute;
    left: 0;
    bottom: 0;
-   z-index: 10;
+   z-index: 1;
 } /* Стрелка влево */
 .slick-arrow.slick-prev {
    background: url(../img/arrownext.svg) 0 0 no-repeat;
@@ -177,12 +184,9 @@
       min-height: 363px;
       padding-top: 123px/1920px * 100vw;
       padding-bottom: 208px/1920px * 100vw;
-   }
-
-   &__background {
-   }
-
-   &__content {
+      @media (max-width: 1328px) {
+         height: auto;
+      }
    }
    .item-1 {
       background: url("../img/img1.1.jpg") 0 0 no-repeat;

@@ -55,7 +55,7 @@ let scrollPrev = 0;
 $(window).scroll(function () {
    var scrolled = $(window).scrollTop();
 
-   if (scrolled > 100 && scrolled > scrollPrev) {
+   if (scrolled > 200 && scrolled > scrollPrev) {
       header.classList.add('out');
    } else {
       header.classList.remove('out');
@@ -71,3 +71,11 @@ window.onscroll = function () {            /*функция при прокру�
       header.classList.remove('remove-bg'); /* если меньше то класс удаляется и кнопка исчезает*/
    }
 };
+
+
+//==== по клику на бургер  Body добавляется класс lock
+$(document).ready(function () {
+   $('.navbar-toggler').click(function (event) {
+      $('body').toggleClass('lock');
+   })
+});

@@ -1,0 +1,63 @@
+.footer {
+   height: 90px;
+}
+
+.social-menu {
+   background: black;
+   height: 100%;
+   align-items: center;
+   justify-content: space-evenly;
+   .social-list {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .social-link {
+      position: relative;
+      width: 40px;
+      height: 40px;
+
+      svg {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+         fill: white;
+         animation: askom infinite ease 5s;
+      }
+      &:hover svg,
+      &:active svg,
+      &:focus svg {
+         fill: red;
+      }
+   }
+   .vk-link {
+      animation: move .8s infinite linear 1s;
+   }
+}
+@keyframes askom {
+   0% {
+      fill: yellowgreen;
+   }
+   25% {
+      fill: red;
+   }
+   50% {
+      fill: white;
+   }
+   75% {
+      fill: blue;
+   }
+}
+@keyframes move {
+   50% {
+      transform: scale(1.1);
+   }
+   75% {
+      // transform: translate(5px);
+   }
+}
