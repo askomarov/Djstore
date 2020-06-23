@@ -37,7 +37,7 @@
             font-size: 32px;
          }
          @media (max-width: 660px) {
-            font-size: 30px;
+            font-size: 29px;
             line-height: 37px;
          }
          @media (max-width: 374px) {
@@ -74,7 +74,7 @@
          line-height: 17px;
       }
    }
-   
+
    .btn-brief {
       background: #397dff;
       border-radius: 8px;
@@ -120,8 +120,8 @@
       background: none;
    }
    @media (max-width: 600px) {
-      width: 95%;
-      margin: 0 auto;
+      width: 95% !important;
+      margin: 5px auto 0;
       border-radius: 30px;
       padding: 10px;
       .slick-dots {
@@ -152,6 +152,7 @@
             height: 10px;
             border-radius: 50%;
             transition: all 0.3s ease 0s;
+            background: #fff;
          }
          .slick-active button {
             background: black;

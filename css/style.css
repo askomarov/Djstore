@@ -712,7 +712,7 @@
 
 @media (max-width: 660px) {
   .promo__text-block h1 {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 37px;
   }
 }
@@ -814,8 +814,8 @@
 
 @media (max-width: 600px) {
   .promo__slider {
-    width: 95%;
-    margin: 0 auto;
+    width: 95% !important;
+    margin: 5px auto 0;
     border-radius: 30px;
     padding: 10px;
   }
@@ -860,6 +860,7 @@
     border-radius: 50%;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    background: #fff;
   }
   .promo__slider .slick-dots .slick-active button {
     background: black;
@@ -988,6 +989,12 @@
 @media (max-width: 991px) {
   .block {
     padding-top: 60px;
+  }
+}
+
+@media (max-width: 375px) {
+  .block {
+    padding-top: 5px;
   }
 }
 
