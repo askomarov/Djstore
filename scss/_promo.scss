@@ -74,11 +74,7 @@
          line-height: 17px;
       }
    }
-   .btn-callback {
-      border: 1px solid #ffffff;
-      margin-right: 24px;
-      margin: 0 auto;
-   }
+   
    .btn-brief {
       background: #397dff;
       border-radius: 8px;
@@ -124,9 +120,46 @@
       background: none;
    }
    @media (max-width: 600px) {
-      width: 500px/600px * 100vw !important;
-      min-width: 320px;
+      width: 95%;
       margin: 0 auto;
+      border-radius: 30px;
+      padding: 10px;
+      .slick-dots {
+         display: flex;
+         font-size: 0;
+         margin: 0;
+         padding: 0;
+         height: 30px;
+         width: 25%;
+         align-items: center;
+         justify-content: space-between;
+         position: absolute;
+         bottom: 5px;
+         left: 50%;
+         transform: translate(-50%);
+         list-style: none;
+         li {
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+         }
+         button {
+            padding: 0;
+            border: none;
+            outline: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease 0s;
+         }
+         .slick-active button {
+            background: black;
+            width: 15px;
+            height: 5px;
+            border-radius: 5px;
+         }
+      }
    }
 }
 /* Слайдер */
@@ -208,4 +241,9 @@
       background: url("../img/img1.jpg") 0 0 no-repeat;
       background-size: cover;
    }
+}
+
+.btn-callback {
+   border: 1px solid #ffffff;
+   margin-right: 24px;
 }

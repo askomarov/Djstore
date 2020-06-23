@@ -2,6 +2,9 @@
    position: relative;
    padding-top: 150px;
    background: #ebeef5;
+   @media (max-width:991px){
+      padding-top: 60px;
+   }
    &__body {
    }
 

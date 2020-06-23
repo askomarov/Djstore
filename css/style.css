@@ -64,7 +64,7 @@
     position: relative;
     z-index: 20;
   }
-  .header__logo img {
+  .header__logo svg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -79,6 +79,9 @@
   height: 90px;
   padding: 0;
   overflow: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 991px) {
@@ -96,11 +99,14 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 991px) {
   .header__menu ul {
     margin-right: 0;
+    height: auto;
   }
 }
 
@@ -753,12 +759,6 @@
   }
 }
 
-.promo .btn-callback {
-  border: 1px solid #ffffff;
-  margin-right: 24px;
-  margin: 0 auto;
-}
-
 .promo .btn-brief {
   background: #397dff;
   border-radius: 8px;
@@ -814,9 +814,58 @@
 
 @media (max-width: 600px) {
   .promo__slider {
-    width: 83.33333vw !important;
-    min-width: 320px;
+    width: 95%;
     margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  .promo__slider .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 25%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    list-style: none;
+  }
+  .promo__slider .slick-dots li {
+    height: 100%;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .promo__slider .slick-dots button {
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .promo__slider .slick-dots .slick-active button {
+    background: black;
+    width: 15px;
+    height: 5px;
+    border-radius: 5px;
   }
 }
 
@@ -925,10 +974,21 @@
   background-size: cover;
 }
 
+.btn-callback {
+  border: 1px solid #ffffff;
+  margin-right: 24px;
+}
+
 .block {
   position: relative;
   padding-top: 150px;
   background: #ebeef5;
+}
+
+@media (max-width: 991px) {
+  .block {
+    padding-top: 60px;
+  }
 }
 
 .block__content {

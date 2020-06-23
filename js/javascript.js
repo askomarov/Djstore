@@ -12,6 +12,14 @@ $(document).ready(function () {
       touchTreshhold: 10,
       asNavFor: ".big-slider",
       variableWidth: true,
+      responsive: [{
+         breakpoint: 600,
+         settings: {
+            adaptiveHeight: true,
+            arrows: false,
+            dots: true, 
+         }
+      }]
    });
 
    $('.big-slider').slick({
@@ -55,7 +63,7 @@ let scrollPrev = 0;
 $(window).scroll(function () {
    var scrolled = $(window).scrollTop();
 
-   if (scrolled > 200 && scrolled > scrollPrev) {
+   if (scrolled > 100 && scrolled > scrollPrev) {
       header.classList.add('out');
    } else {
       header.classList.remove('out');
